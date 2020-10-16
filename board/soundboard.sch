@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -1258,35 +1258,15 @@ Wire Wire Line
 Connection ~ 5250 5650
 Wire Wire Line
 	5250 5650 5250 5800
-$Comp
-L power:GND #PWR0117
-U 1 1 6030045C
-P 9950 2800
-F 0 "#PWR0117" H 9950 2550 50  0001 C CNN
-F 1 "GND" H 9955 2627 50  0000 C CNN
-F 2 "" H 9950 2800 50  0001 C CNN
-F 3 "" H 9950 2800 50  0001 C CNN
-	1    9950 2800
-	1    0    0    -1  
-$EndComp
+$Sheet
+S 9450 1200 1050 950 
+U 5F8F8E6B
+F0 "Analog Audio" 50
+F1 "analog.sch" 50
+F2 "SDOUT" O R 10500 2000 50 
+$EndSheet
 Wire Wire Line
-	9950 2650 9950 2700
-Wire Wire Line
-	10050 2650 10050 2700
-Wire Wire Line
-	10050 2700 9950 2700
-Connection ~ 9950 2700
-Wire Wire Line
-	9950 2700 9950 2800
-$Comp
-L soundboard:PCM6260xxxxxx U?
-U 1 1 5F8D1636
-P 10000 1600
-F 0 "U?" H 9550 600 50  0000 C CNN
-F 1 "PCM6260xxxxxx" H 10400 600 50  0000 C CNN
-F 2 "" H 10000 1600 50  0001 C CNN
-F 3 "" H 10000 1600 50  0001 C CNN
-	1    10000 1600
-	1    0    0    -1  
-$EndComp
+	10500 2000 10750 2000
+Text Label 10750 2000 2    50   ~ 0
+I2S_SD
 $EndSCHEMATC
