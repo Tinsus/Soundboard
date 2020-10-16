@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name multiplexer2)(type KiCad)(uri ${KIPRJMOD}/multiplexer2.pretty)(options "")(descr ""))
-)
