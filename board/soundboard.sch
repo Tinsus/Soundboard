@@ -1126,65 +1126,6 @@ Wire Wire Line
 	3850 6000 3850 6100
 Connection ~ 3850 6100
 $Comp
-L Connector:AudioJack3 J3
-U 1 1 601BF9A2
-P 2700 6250
-F 0 "J3" H 2682 6575 50  0000 C CNN
-F 1 "AudioJack3" H 2682 6484 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 2700 6250 50  0001 C CNN
-F 3 "~" H 2700 6250 50  0001 C CNN
-	1    2700 6250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2850 6700 3450 6700
-Wire Wire Line
-	3450 6700 3450 6800
-$Comp
-L Connector:AudioJack3 J2
-U 1 1 601D5338
-P 2650 6800
-F 0 "J2" H 2632 7125 50  0000 C CNN
-F 1 "AudioJack3" H 2632 7034 50  0000 C CNN
-F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 2650 6800 50  0001 C CNN
-F 3 "~" H 2650 6800 50  0001 C CNN
-	1    2650 6800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2850 6800 3450 6800
-Connection ~ 3450 6800
-$Comp
-L power:GND #PWR0115
-U 1 1 601E2D4F
-P 3450 7050
-F 0 "#PWR0115" H 3450 6800 50  0001 C CNN
-F 1 "GND" H 3455 6877 50  0000 C CNN
-F 2 "" H 3450 7050 50  0001 C CNN
-F 3 "" H 3450 7050 50  0001 C CNN
-	1    3450 7050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3450 6800 3450 7050
-Wire Wire Line
-	3450 6700 3450 6150
-Wire Wire Line
-	3450 6150 2900 6150
-Connection ~ 3450 6700
-Wire Wire Line
-	2850 6900 3150 6900
-Text Label 3150 6900 2    50   ~ 0
-MIC_IN
-Wire Wire Line
-	2900 6250 3150 6250
-Wire Wire Line
-	2900 6350 3150 6350
-Text Label 3150 6250 2    50   ~ 0
-OUT_L
-Text Label 3150 6350 2    50   ~ 0
-OUT_R
-$Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 602A5575
 P 5500 4900

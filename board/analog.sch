@@ -16,12 +16,12 @@ $EndDescr
 $Comp
 L power:GND #PWR?
 U 1 1 5F93E32A
-P 4700 3900
-F 0 "#PWR?" H 4700 3650 50  0001 C CNN
-F 1 "GND" H 4705 3727 50  0000 C CNN
-F 2 "" H 4700 3900 50  0001 C CNN
-F 3 "" H 4700 3900 50  0001 C CNN
-	1    4700 3900
+P 4700 3950
+F 0 "#PWR?" H 4700 3700 50  0001 C CNN
+F 1 "GND" H 4705 3777 50  0000 C CNN
+F 2 "" H 4700 3950 50  0001 C CNN
+F 3 "" H 4700 3950 50  0001 C CNN
+	1    4700 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -32,7 +32,7 @@ Wire Wire Line
 	4800 3800 4700 3800
 Connection ~ 4700 3800
 Wire Wire Line
-	4700 3800 4700 3900
+	4700 3800 4700 3950
 $Comp
 L soundboard:PCM6260xxxxxx U?
 U 1 1 5F93E335
@@ -46,8 +46,378 @@ F 3 "" H 4750 2700 50  0001 C CNN
 	1    4750 2700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:AudioJack3 J1
+U 1 1 5F8F5379
+P 1000 6650
+F 0 "J1" H 982 6975 50  0000 C CNN
+F 1 "HeadphoneStereo_OUT" H 982 6884 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 1000 6650 50  0001 C CNN
+F 3 "~" H 1000 6650 50  0001 C CNN
+	1    1000 6650
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4150 2950 3850 2950
-Text HLabel 3850 2950 0    50   Output ~ 0
-SDOUT
+	1200 7200 2200 7200
+Wire Wire Line
+	2200 7200 2200 7300
+$Comp
+L Connector:AudioJack3 J3
+U 1 1 5F8F5381
+P 1000 7300
+F 0 "J3" H 982 7625 50  0000 C CNN
+F 1 "HeadphoneMic_IN" H 982 7534 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 1000 7300 50  0001 C CNN
+F 3 "~" H 1000 7300 50  0001 C CNN
+	1    1000 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 7300 2200 7300
+Connection ~ 2200 7300
+$Comp
+L power:GND #PWR?
+U 1 1 5F8F5389
+P 2200 7550
+F 0 "#PWR?" H 2200 7300 50  0001 C CNN
+F 1 "GND" H 2205 7377 50  0000 C CNN
+F 2 "" H 2200 7550 50  0001 C CNN
+F 3 "" H 2200 7550 50  0001 C CNN
+	1    2200 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 7300 2200 7550
+Wire Wire Line
+	2200 6550 1200 6550
+Connection ~ 2200 7200
+Wire Wire Line
+	1200 7400 2100 7400
+Text Label 2100 7400 2    50   ~ 0
+HEADSET_MICROPHONE
+Wire Wire Line
+	1200 6650 2100 6650
+Wire Wire Line
+	1200 6750 2100 6750
+Text Label 2100 6650 2    50   ~ 0
+HEADSET_AUDIO_L
+Text Label 2100 6750 2    50   ~ 0
+HEADSET_AUDIO_R
+$Comp
+L Connector:AudioJack3 J4
+U 1 1 5F8FA09E
+P 3200 7300
+F 0 "J4" H 3182 7625 50  0000 C CNN
+F 1 "PCMic_OUT" H 3182 7534 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 3200 7300 50  0001 C CNN
+F 3 "~" H 3200 7300 50  0001 C CNN
+	1    3200 7300
+	-1   0    0    -1  
+$EndComp
+Text Label 2300 7400 0    50   ~ 0
+PC_MICROPHONE
+Text Label 2300 6650 0    50   ~ 0
+PC_AUDIO_L
+Text Label 2300 6750 0    50   ~ 0
+PC_AUDIO_R
+Wire Wire Line
+	3000 6550 2200 6550
+Connection ~ 2200 6550
+Wire Wire Line
+	2200 7200 3000 7200
+Wire Wire Line
+	2200 7300 3000 7300
+Wire Wire Line
+	2300 7400 3000 7400
+Wire Wire Line
+	2300 6650 3000 6650
+Wire Wire Line
+	2300 6750 3000 6750
+$Comp
+L Connector:AudioJack3 J2
+U 1 1 5F8FA096
+P 3200 6650
+F 0 "J2" H 3182 6975 50  0000 C CNN
+F 1 "PCStereo_IN" H 3182 6884 50  0000 C CNN
+F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 3200 6650 50  0001 C CNN
+F 3 "~" H 3200 6650 50  0001 C CNN
+	1    3200 6650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 6550 2200 7200
+Text HLabel 3900 2550 0    50   Input ~ 0
+I2C_RECORD_CLOCK
+Text HLabel 3900 2650 0    50   Input ~ 0
+I2C_RECORD_DATA
+Text HLabel 3900 2950 0    50   Input ~ 0
+I2S_RECORD_DATA
+Text HLabel 3900 3050 0    50   Input ~ 0
+I2S_RECORD_CLOCK
+Text HLabel 3900 3150 0    50   Input ~ 0
+I2S_RECORD_FRAME_SYNC
+Wire Wire Line
+	3900 2550 4150 2550
+Wire Wire Line
+	3900 2650 4150 2650
+Wire Wire Line
+	3900 2950 4150 2950
+Wire Wire Line
+	3900 3050 4150 3050
+Wire Wire Line
+	3900 3150 4150 3150
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F9201E5
+P 4650 1750
+F 0 "#PWR?" H 4650 1600 50  0001 C CNN
+F 1 "+3V3" H 4665 1923 50  0000 C CNN
+F 2 "" H 4650 1750 50  0001 C CNN
+F 3 "" H 4650 1750 50  0001 C CNN
+	1    4650 1750
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4750 1900
+Wire Wire Line
+	4650 1750 4650 1850
+Wire Wire Line
+	4650 1850 4850 1850
+Wire Wire Line
+	4850 1850 4850 1900
+Connection ~ 4650 1850
+Wire Wire Line
+	4650 1850 4650 1900
+Wire Wire Line
+	4850 1850 4950 1850
+Wire Wire Line
+	4950 1850 4950 1900
+Connection ~ 4850 1850
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F9237D7
+P 4100 2000
+F 0 "#PWR?" H 4100 1850 50  0001 C CNN
+F 1 "+3V3" H 4115 2173 50  0000 C CNN
+F 2 "" H 4100 2000 50  0001 C CNN
+F 3 "" H 4100 2000 50  0001 C CNN
+	1    4100 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2200 4100 2200
+Wire Wire Line
+	4100 2200 4100 2100
+Wire Wire Line
+	4150 2100 4100 2100
+Connection ~ 4100 2100
+Wire Wire Line
+	4100 2100 4100 2000
+$Comp
+L Device:C C?
+U 1 1 5F92D074
+P 5550 3700
+F 0 "C?" H 5665 3746 50  0000 L CNN
+F 1 "1µF" H 5665 3655 50  0000 L CNN
+F 2 "" H 5588 3550 50  0001 C CNN
+F 3 "~" H 5550 3700 50  0001 C CNN
+	1    5550 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3550 5550 3550
+$Comp
+L power:GND #PWR?
+U 1 1 5F9309D6
+P 5550 3950
+F 0 "#PWR?" H 5550 3700 50  0001 C CNN
+F 1 "GND" H 5555 3777 50  0000 C CNN
+F 2 "" H 5550 3950 50  0001 C CNN
+F 3 "" H 5550 3950 50  0001 C CNN
+	1    5550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3850 5550 3900
+NoConn ~ 4150 2800
+$Comp
+L Device:C C?
+U 1 1 5F934C26
+P 5900 3700
+F 0 "C?" H 6015 3746 50  0000 L CNN
+F 1 "1µF" H 6015 3655 50  0000 L CNN
+F 2 "" H 5938 3550 50  0001 C CNN
+F 3 "~" H 5900 3700 50  0001 C CNN
+	1    5900 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3450 5900 3450
+Wire Wire Line
+	5900 3450 5900 3550
+Wire Wire Line
+	5900 3850 5900 3900
+Wire Wire Line
+	5900 3900 5550 3900
+Connection ~ 5550 3900
+Wire Wire Line
+	5550 3900 5550 3950
+NoConn ~ 5350 3350
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5F93760A
+P 3200 1750
+F 0 "JP?" H 3200 1955 50  0000 C CNN
+F 1 "I2C_RECORD_ADDRESS_A0" H 3200 1864 50  0000 C CNN
+F 2 "" H 3200 1750 50  0001 C CNN
+F 3 "~" H 3200 1750 50  0001 C CNN
+	1    3200 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5F939A07
+P 3200 2050
+F 0 "JP?" H 3200 2255 50  0000 C CNN
+F 1 "I2C_RECORD_ADDRESS_A1" H 3200 2164 50  0000 C CNN
+F 2 "" H 3200 2050 50  0001 C CNN
+F 3 "~" H 3200 2050 50  0001 C CNN
+	1    3200 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F93A10A
+P 2500 1750
+F 0 "R?" V 2293 1750 50  0000 C CNN
+F 1 "1MOhm" V 2384 1750 50  0000 C CNN
+F 2 "" V 2430 1750 50  0001 C CNN
+F 3 "~" H 2500 1750 50  0001 C CNN
+	1    2500 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F93B50C
+P 2250 2150
+F 0 "#PWR?" H 2250 1900 50  0001 C CNN
+F 1 "GND" H 2255 1977 50  0000 C CNN
+F 2 "" H 2250 2150 50  0001 C CNN
+F 3 "" H 2250 2150 50  0001 C CNN
+	1    2250 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F93C63B
+P 2500 2050
+F 0 "R?" V 2293 2050 50  0000 C CNN
+F 1 "1MOhm" V 2384 2050 50  0000 C CNN
+F 2 "" V 2430 2050 50  0001 C CNN
+F 3 "~" H 2500 2050 50  0001 C CNN
+	1    2500 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2350 1750 2250 1750
+Wire Wire Line
+	2350 2050 2250 2050
+Wire Wire Line
+	2250 2050 2250 2150
+Wire Wire Line
+	2950 2350 4150 2350
+Wire Wire Line
+	2950 1750 3050 1750
+Wire Wire Line
+	2850 2050 2850 2450
+Wire Wire Line
+	2850 2450 4150 2450
+Wire Wire Line
+	2850 2050 3050 2050
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F94769F
+P 3700 1650
+F 0 "#PWR?" H 3700 1500 50  0001 C CNN
+F 1 "+3V3" H 3715 1823 50  0000 C CNN
+F 2 "" H 3700 1650 50  0001 C CNN
+F 3 "" H 3700 1650 50  0001 C CNN
+	1    3700 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1650 3700 1750
+Connection ~ 3700 1750
+Wire Wire Line
+	2250 1750 2250 2050
+Connection ~ 2250 2050
+Wire Wire Line
+	3700 1750 3700 2050
+Wire Wire Line
+	2950 1750 2950 2350
+Wire Wire Line
+	2650 1750 2950 1750
+Connection ~ 2950 1750
+Wire Wire Line
+	3350 1750 3700 1750
+Wire Wire Line
+	3350 2050 3700 2050
+Wire Wire Line
+	2650 2050 2850 2050
+Connection ~ 2850 2050
+Text Label 5600 3450 0    50   ~ 0
+MICBIAS
+Text Notes 8550 650  0    50   ~ 0
+Resistor - 4kOhms\n
+Wire Wire Line
+	5350 2100 5650 2100
+Text Label 5650 2100 2    50   ~ 0
+IN1P
+Wire Wire Line
+	5350 2200 5650 2200
+Text Label 5650 2200 2    50   ~ 0
+IN1M
+Wire Wire Line
+	7950 650  8250 650 
+Text Label 7950 650  0    50   ~ 0
+IN1P
+Wire Wire Line
+	5350 2300 5650 2300
+Wire Wire Line
+	5350 2400 5650 2400
+Wire Wire Line
+	5350 2500 5650 2500
+Wire Wire Line
+	5350 2600 5650 2600
+Wire Wire Line
+	5350 2700 5650 2700
+Wire Wire Line
+	5350 2800 5650 2800
+Wire Wire Line
+	5350 2900 5650 2900
+Wire Wire Line
+	5350 3000 5650 3000
+Wire Wire Line
+	5350 3100 5650 3100
+Wire Wire Line
+	5350 3200 5650 3200
+Text Label 5650 2300 2    50   ~ 0
+IN2P
+Text Label 5650 2400 2    50   ~ 0
+IN2M
+Text Label 5650 2500 2    50   ~ 0
+IN3P
+Text Label 5650 2600 2    50   ~ 0
+IN3M
+Text Label 5650 2700 2    50   ~ 0
+IN4P
+Text Label 5650 2800 2    50   ~ 0
+IN4M
+Text Label 5650 2900 2    50   ~ 0
+IN5P
+Text Label 5650 3000 2    50   ~ 0
+IN5M
+Text Label 5650 3100 2    50   ~ 0
+IN6P
+Text Label 5650 3200 2    50   ~ 0
+IN6M
 $EndSCHEMATC
