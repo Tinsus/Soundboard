@@ -59,8 +59,6 @@ F 3 "~" H 1000 6650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1200 7200 2200 7200
-Wire Wire Line
-	2200 7200 2200 7300
 $Comp
 L Connector:AudioJack3 J3
 U 1 1 5F8F5381
@@ -72,9 +70,6 @@ F 3 "~" H 1000 7300 50  0001 C CNN
 	1    1000 7300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1200 7300 2200 7300
-Connection ~ 2200 7300
 $Comp
 L power:GND #PWR?
 U 1 1 5F8F5389
@@ -86,8 +81,6 @@ F 3 "" H 2200 7550 50  0001 C CNN
 	1    2200 7550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2200 7300 2200 7550
 Wire Wire Line
 	2200 6550 1200 6550
 Connection ~ 2200 7200
@@ -125,8 +118,6 @@ Wire Wire Line
 Connection ~ 2200 6550
 Wire Wire Line
 	2200 7200 3000 7200
-Wire Wire Line
-	2200 7300 3000 7300
 Wire Wire Line
 	2300 7400 3000 7400
 Wire Wire Line
@@ -344,8 +335,6 @@ Wire Wire Line
 Connection ~ 1250 2800
 Text Label 5300 2450 0    50   ~ 0
 MICBIAS
-Text Notes 6900 300  0    50   ~ 0
-TODO: compute cap values as impedance matched pass filter element for audio frequency (44kHz Samplingrate)\n
 Wire Wire Line
 	5050 1100 5350 1100
 Text Label 5350 1100 2    50   ~ 0
@@ -657,21 +646,10 @@ L Device:C C?
 U 1 1 5F9AB0C0
 P 8050 1100
 F 0 "C?" V 8302 1100 50  0000 C CNN
-F 1 "C" V 8211 1100 50  0000 C CNN
+F 1 "1nF" V 8211 1100 50  0000 C CNN
 F 2 "" H 8088 950 50  0001 C CNN
 F 3 "~" H 8050 1100 50  0001 C CNN
 	1    8050 1100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F9AC59E
-P 8050 1500
-F 0 "C?" V 8302 1500 50  0000 C CNN
-F 1 "C" V 8211 1500 50  0000 C CNN
-F 2 "" H 8088 1350 50  0001 C CNN
-F 3 "~" H 8050 1500 50  0001 C CNN
-	1    8050 1500
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
@@ -744,28 +722,6 @@ Wire Wire Line
 Connection ~ 9800 1500
 Wire Wire Line
 	9800 1500 10050 1500
-$Comp
-L Device:C C?
-U 1 1 5F9CA3EE
-P 10200 1100
-F 0 "C?" V 10452 1100 50  0000 C CNN
-F 1 "C" V 10361 1100 50  0000 C CNN
-F 2 "" H 10238 950 50  0001 C CNN
-F 3 "~" H 10200 1100 50  0001 C CNN
-	1    10200 1100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F9CA3F4
-P 10200 1500
-F 0 "C?" V 10452 1500 50  0000 C CNN
-F 1 "C" V 10361 1500 50  0000 C CNN
-F 2 "" H 10238 1350 50  0001 C CNN
-F 3 "~" H 10200 1500 50  0001 C CNN
-	1    10200 1500
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	9800 950  9800 1500
 Wire Wire Line
@@ -836,28 +792,6 @@ Wire Wire Line
 Connection ~ 7650 2850
 Wire Wire Line
 	7650 2850 7900 2850
-$Comp
-L Device:C C?
-U 1 1 5F9D9057
-P 8050 2450
-F 0 "C?" V 8302 2450 50  0000 C CNN
-F 1 "C" V 8211 2450 50  0000 C CNN
-F 2 "" H 8088 2300 50  0001 C CNN
-F 3 "~" H 8050 2450 50  0001 C CNN
-	1    8050 2450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F9D905D
-P 8050 2850
-F 0 "C?" V 8302 2850 50  0000 C CNN
-F 1 "C" V 8211 2850 50  0000 C CNN
-F 2 "" H 8088 2700 50  0001 C CNN
-F 3 "~" H 8050 2850 50  0001 C CNN
-	1    8050 2850
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	7650 2300 7650 2850
 Wire Wire Line
@@ -928,28 +862,6 @@ Wire Wire Line
 Connection ~ 9800 2850
 Wire Wire Line
 	9800 2850 10050 2850
-$Comp
-L Device:C C?
-U 1 1 5F9D9089
-P 10200 2450
-F 0 "C?" V 10452 2450 50  0000 C CNN
-F 1 "C" V 10361 2450 50  0000 C CNN
-F 2 "" H 10238 2300 50  0001 C CNN
-F 3 "~" H 10200 2450 50  0001 C CNN
-	1    10200 2450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F9D908F
-P 10200 2850
-F 0 "C?" V 10452 2850 50  0000 C CNN
-F 1 "C" V 10361 2850 50  0000 C CNN
-F 2 "" H 10238 2700 50  0001 C CNN
-F 3 "~" H 10200 2850 50  0001 C CNN
-	1    10200 2850
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	9800 2300 9800 2850
 Wire Wire Line
@@ -1020,28 +932,6 @@ Wire Wire Line
 Connection ~ 7650 4200
 Wire Wire Line
 	7650 4200 7900 4200
-$Comp
-L Device:C C?
-U 1 1 5F9E4308
-P 8050 3800
-F 0 "C?" V 8302 3800 50  0000 C CNN
-F 1 "C" V 8211 3800 50  0000 C CNN
-F 2 "" H 8088 3650 50  0001 C CNN
-F 3 "~" H 8050 3800 50  0001 C CNN
-	1    8050 3800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F9E430E
-P 8050 4200
-F 0 "C?" V 8302 4200 50  0000 C CNN
-F 1 "C" V 8211 4200 50  0000 C CNN
-F 2 "" H 8088 4050 50  0001 C CNN
-F 3 "~" H 8050 4200 50  0001 C CNN
-	1    8050 4200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	7650 3650 7650 4200
 Wire Wire Line
@@ -1112,28 +1002,6 @@ Wire Wire Line
 Connection ~ 9800 4200
 Wire Wire Line
 	9800 4200 10050 4200
-$Comp
-L Device:C C?
-U 1 1 5F9E433A
-P 10200 3800
-F 0 "C?" V 10452 3800 50  0000 C CNN
-F 1 "C" V 10361 3800 50  0000 C CNN
-F 2 "" H 10238 3650 50  0001 C CNN
-F 3 "~" H 10200 3800 50  0001 C CNN
-	1    10200 3800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5F9E4340
-P 10200 4200
-F 0 "C?" V 10452 4200 50  0000 C CNN
-F 1 "C" V 10361 4200 50  0000 C CNN
-F 2 "" H 10238 4050 50  0001 C CNN
-F 3 "~" H 10200 4200 50  0001 C CNN
-	1    10200 4200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	9800 3650 9800 4200
 Wire Wire Line
@@ -1144,4 +1012,162 @@ Text Label 11200 3800 2    50   ~ 0
 AUDIO_RECORD_CH_3R
 Wire Wire Line
 	10350 3800 11200 3800
+Wire Wire Line
+	1200 7300 2100 7300
+Text Label 2100 7300 2    50   ~ 0
+MIC_PHANTOM
+$Comp
+L power:+5V #PWR?
+U 1 1 5F8F1237
+P 750 5900
+F 0 "#PWR?" H 750 5750 50  0001 C CNN
+F 1 "+5V" H 765 6073 50  0000 C CNN
+F 2 "" H 750 5900 50  0001 C CNN
+F 3 "" H 750 5900 50  0001 C CNN
+	1    750  5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 7200 2200 7550
+$Comp
+L Device:R R?
+U 1 1 5F8F2B7F
+P 1000 6050
+F 0 "R?" V 793 6050 50  0000 C CNN
+F 1 "1k" V 884 6050 50  0000 C CNN
+F 2 "" V 930 6050 50  0001 C CNN
+F 3 "~" H 1000 6050 50  0001 C CNN
+	1    1000 6050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	750  5900 750  6050
+Wire Wire Line
+	750  6050 850  6050
+Text Label 1700 6050 2    50   ~ 0
+MIC_PHANTOM
+Wire Wire Line
+	1150 6050 1700 6050
+NoConn ~ 3000 7300
+$Comp
+L Device:C C?
+U 1 1 5F8F2CF8
+P 8050 1500
+F 0 "C?" V 8302 1500 50  0000 C CNN
+F 1 "1nF" V 8211 1500 50  0000 C CNN
+F 2 "" H 8088 1350 50  0001 C CNN
+F 3 "~" H 8050 1500 50  0001 C CNN
+	1    8050 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F3133
+P 10200 1100
+F 0 "C?" V 10452 1100 50  0000 C CNN
+F 1 "1nF" V 10361 1100 50  0000 C CNN
+F 2 "" H 10238 950 50  0001 C CNN
+F 3 "~" H 10200 1100 50  0001 C CNN
+	1    10200 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F3852
+P 10200 1500
+F 0 "C?" V 10452 1500 50  0000 C CNN
+F 1 "1nF" V 10361 1500 50  0000 C CNN
+F 2 "" H 10238 1350 50  0001 C CNN
+F 3 "~" H 10200 1500 50  0001 C CNN
+	1    10200 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F3C78
+P 10200 2450
+F 0 "C?" V 10452 2450 50  0000 C CNN
+F 1 "1nF" V 10361 2450 50  0000 C CNN
+F 2 "" H 10238 2300 50  0001 C CNN
+F 3 "~" H 10200 2450 50  0001 C CNN
+	1    10200 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F41CB
+P 10200 2850
+F 0 "C?" V 10452 2850 50  0000 C CNN
+F 1 "1nF" V 10361 2850 50  0000 C CNN
+F 2 "" H 10238 2700 50  0001 C CNN
+F 3 "~" H 10200 2850 50  0001 C CNN
+	1    10200 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F4577
+P 8050 2450
+F 0 "C?" V 8302 2450 50  0000 C CNN
+F 1 "1nF" V 8211 2450 50  0000 C CNN
+F 2 "" H 8088 2300 50  0001 C CNN
+F 3 "~" H 8050 2450 50  0001 C CNN
+	1    8050 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F4D3D
+P 8050 2850
+F 0 "C?" V 8302 2850 50  0000 C CNN
+F 1 "1nF" V 8211 2850 50  0000 C CNN
+F 2 "" H 8088 2700 50  0001 C CNN
+F 3 "~" H 8050 2850 50  0001 C CNN
+	1    8050 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F5101
+P 8050 3800
+F 0 "C?" V 8302 3800 50  0000 C CNN
+F 1 "1nF" V 8211 3800 50  0000 C CNN
+F 2 "" H 8088 3650 50  0001 C CNN
+F 3 "~" H 8050 3800 50  0001 C CNN
+	1    8050 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F54F1
+P 8050 4200
+F 0 "C?" V 8302 4200 50  0000 C CNN
+F 1 "1nF" V 8211 4200 50  0000 C CNN
+F 2 "" H 8088 4050 50  0001 C CNN
+F 3 "~" H 8050 4200 50  0001 C CNN
+	1    8050 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F59B9
+P 10200 3800
+F 0 "C?" V 10452 3800 50  0000 C CNN
+F 1 "1nF" V 10361 3800 50  0000 C CNN
+F 2 "" H 10238 3650 50  0001 C CNN
+F 3 "~" H 10200 3800 50  0001 C CNN
+	1    10200 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8F6027
+P 10200 4200
+F 0 "C?" V 10452 4200 50  0000 C CNN
+F 1 "1nF" V 10361 4200 50  0000 C CNN
+F 2 "" H 10238 4050 50  0001 C CNN
+F 3 "~" H 10200 4200 50  0001 C CNN
+	1    10200 4200
+	0    -1   -1   0   
+$EndComp
 $EndSCHEMATC
