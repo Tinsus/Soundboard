@@ -47,10 +47,10 @@ F 3 "" H 4450 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack3 J1
+L Connector:AudioJack3 J?
 U 1 1 5F8F5379
 P 1000 6450
-F 0 "J1" H 982 6775 50  0000 C CNN
+F 0 "J?" H 982 6775 50  0000 C CNN
 F 1 "HeadphoneStereo_OUT" H 982 6684 50  0000 C CNN
 F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 1000 6450 50  0001 C CNN
 F 3 "~" H 1000 6450 50  0001 C CNN
@@ -58,10 +58,10 @@ F 3 "~" H 1000 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:AudioJack3 J3
+L Connector:AudioJack3 J?
 U 1 1 5F8F5381
 P 1000 7100
-F 0 "J3" H 982 7425 50  0000 C CNN
+F 0 "J?" H 982 7425 50  0000 C CNN
 F 1 "HeadphoneMic_IN" H 982 7334 50  0000 C CNN
 F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 1000 7100 50  0001 C CNN
 F 3 "~" H 1000 7100 50  0001 C CNN
@@ -78,10 +78,10 @@ HEADSET_AUDIO_L
 Text Label 2650 6550 2    50   ~ 0
 HEADSET_AUDIO_R
 $Comp
-L Connector:AudioJack3 J4
+L Connector:AudioJack3 J?
 U 1 1 5F8FA09E
 P 3750 7100
-F 0 "J4" H 3732 7425 50  0000 C CNN
+F 0 "J?" H 3732 7425 50  0000 C CNN
 F 1 "PCMic_OUT" H 3732 7334 50  0000 C CNN
 F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 3750 7100 50  0001 C CNN
 F 3 "~" H 3750 7100 50  0001 C CNN
@@ -105,10 +105,10 @@ Wire Wire Line
 Wire Wire Line
 	2850 6550 3550 6550
 $Comp
-L Connector:AudioJack3 J2
+L Connector:AudioJack3 J?
 U 1 1 5F8FA096
 P 3750 6450
-F 0 "J2" H 3732 6775 50  0000 C CNN
+F 0 "J?" H 3732 6775 50  0000 C CNN
 F 1 "PCStereo_IN" H 3732 6684 50  0000 C CNN
 F 2 "Connector_Audio:Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal" H 3750 6450 50  0001 C CNN
 F 3 "~" H 3750 6450 50  0001 C CNN
@@ -118,9 +118,9 @@ $EndComp
 Wire Wire Line
 	2750 6350 2750 7000
 Text HLabel 3600 1550 0    50   Input ~ 0
-I2C_RECORD_CLOCK
+I2C_SCL
 Text HLabel 3600 1650 0    50   Input ~ 0
-I2C_RECORD_DATA
+I2C_SDA
 Text HLabel 3600 1950 0    50   Input ~ 0
 I2S_RECORD_DATA
 Text HLabel 3600 2050 0    50   Input ~ 0
@@ -1222,9 +1222,9 @@ PLAYBACK_SOFTMUTE
 Wire Wire Line
 	3800 3900 3900 3900
 Text HLabel 3800 4300 0    50   Input ~ 0
-I2C_PLAYBACK_DATA
+I2C_SDA
 Text HLabel 3800 4400 0    50   Input ~ 0
-I2C_PLAYBACK_CLOCK
+I2C_SCL
 NoConn ~ 5100 4550
 NoConn ~ 5100 4450
 NoConn ~ 5100 4350
@@ -1290,7 +1290,6 @@ Connection ~ 4550 5650
 Wire Wire Line
 	4350 5650 4350 5700
 Connection ~ 4350 5650
-NoConn ~ 5100 5400
 NoConn ~ 5100 5150
 NoConn ~ 5100 5250
 $Comp
@@ -1581,4 +1580,32 @@ Wire Wire Line
 	5100 4100 5450 4100
 Wire Wire Line
 	5450 4200 5100 4200
+$Comp
+L Device:C C?
+U 1 1 5FF264D0
+P 5200 5650
+F 0 "C?" H 5315 5696 50  0000 L CNN
+F 1 "0.1µF" H 5315 5605 50  0000 L CNN
+F 2 "" H 5238 5500 50  0001 C CNN
+F 3 "~" H 5200 5650 50  0001 C CNN
+	1    5200 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF27718
+P 5200 5950
+F 0 "#PWR?" H 5200 5700 50  0001 C CNN
+F 1 "GND" H 5205 5777 50  0000 C CNN
+F 2 "" H 5200 5950 50  0001 C CNN
+F 3 "" H 5200 5950 50  0001 C CNN
+	1    5200 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 5400 5200 5400
+Wire Wire Line
+	5200 5400 5200 5500
+Wire Wire Line
+	5200 5800 5200 5950
 $EndSCHEMATC
