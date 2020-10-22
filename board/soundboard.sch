@@ -131,24 +131,8 @@ Wire Wire Line
 Wire Wire Line
 	1350 2850 1350 2900
 Connection ~ 1350 2850
-Wire Wire Line
-	3750 1800 4200 1800
-Wire Wire Line
-	4200 1900 3750 1900
-Wire Wire Line
-	4200 2000 3750 2000
-Text Label 4200 1800 2    50   ~ 0
-VOL1
-Text Label 4200 1900 2    50   ~ 0
-VOL2
-Text Label 4200 2000 2    50   ~ 0
-VOL3
 Text Label 4200 5000 2    50   ~ 0
 I2S1_SD
-Text Label 4200 4900 2    50   ~ 0
-I2S1_ext_SD
-Wire Wire Line
-	3750 4900 4200 4900
 Wire Wire Line
 	3750 5000 4200 5000
 Wire Wire Line
@@ -190,7 +174,7 @@ SWDIO
 Wire Wire Line
 	3750 3200 4200 3200
 Text Label 4200 3200 2    50   ~ 0
-SWCLK
+SWDCLK
 Wire Wire Line
 	2750 1500 2750 1350
 Wire Wire Line
@@ -473,10 +457,6 @@ Wire Wire Line
 	3750 6400 4200 6400
 Text Label 4200 6400 2    50   ~ 0
 I2S2_SD
-Text Label 4200 6300 2    50   ~ 0
-I2S2_ext_SD
-Wire Wire Line
-	4200 6300 3750 6300
 Wire Wire Line
 	3750 3300 4200 3300
 Text Label 4200 3300 2    50   ~ 0
@@ -690,58 +670,58 @@ $EndComp
 Wire Wire Line
 	5550 2150 5550 2250
 $Comp
-L Connector:USB_B J?
+L Connector:USB_B J1
 U 1 1 5FEEF7C1
-P 5900 6700
-F 0 "J?" H 5957 7167 50  0000 C CNN
-F 1 "USB_B" H 5957 7076 50  0000 C CNN
-F 2 "Connector_USB:USB_B_Amphenol_MUSB-D511_Vertical_Rugged" H 6050 6650 50  0001 C CNN
-F 3 " ~" H 6050 6650 50  0001 C CNN
-	1    5900 6700
+P 1200 6900
+F 0 "J1" H 1257 7367 50  0000 C CNN
+F 1 "USB_B" H 1257 7276 50  0000 C CNN
+F 2 "Connector_USB:USB_B_Amphenol_MUSB-D511_Vertical_Rugged" H 1350 6850 50  0001 C CNN
+F 3 " ~" H 1350 6850 50  0001 C CNN
+	1    1200 6900
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR0109
 U 1 1 5FEF17E9
-P 6300 6400
-F 0 "#PWR0109" H 6300 6250 50  0001 C CNN
-F 1 "+5V" H 6315 6573 50  0000 C CNN
-F 2 "" H 6300 6400 50  0001 C CNN
-F 3 "" H 6300 6400 50  0001 C CNN
-	1    6300 6400
+P 1600 6600
+F 0 "#PWR0109" H 1600 6450 50  0001 C CNN
+F 1 "+5V" H 1615 6773 50  0000 C CNN
+F 2 "" H 1600 6600 50  0001 C CNN
+F 3 "" H 1600 6600 50  0001 C CNN
+	1    1600 6600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6300 6400 6300 6500
+	1600 6600 1600 6700
 Wire Wire Line
-	6300 6500 6200 6500
+	1600 6700 1500 6700
 Wire Wire Line
-	5800 7100 5800 7200
+	1100 7300 1100 7400
 Wire Wire Line
-	5800 7200 5900 7200
+	1100 7400 1200 7400
 Wire Wire Line
-	5900 7200 5900 7100
+	1200 7400 1200 7300
 $Comp
 L power:GND #PWR0110
 U 1 1 5FEFF888
-P 5900 7300
-F 0 "#PWR0110" H 5900 7050 50  0001 C CNN
-F 1 "GND" H 5905 7127 50  0000 C CNN
-F 2 "" H 5900 7300 50  0001 C CNN
-F 3 "" H 5900 7300 50  0001 C CNN
-	1    5900 7300
+P 1200 7500
+F 0 "#PWR0110" H 1200 7250 50  0001 C CNN
+F 1 "GND" H 1205 7327 50  0000 C CNN
+F 2 "" H 1200 7500 50  0001 C CNN
+F 3 "" H 1200 7500 50  0001 C CNN
+	1    1200 7500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 7200 5900 7300
-Connection ~ 5900 7200
+	1200 7400 1200 7500
+Connection ~ 1200 7400
 Wire Wire Line
-	6200 6700 6400 6700
+	1500 6900 1700 6900
 Wire Wire Line
-	6400 6800 6200 6800
-Text Label 6400 6700 2    50   ~ 0
+	1700 7000 1500 7000
+Text Label 1700 6900 2    50   ~ 0
 USB+
-Text Label 6400 6800 2    50   ~ 0
+Text Label 1700 7000 2    50   ~ 0
 USB-
 Wire Wire Line
 	3750 3800 4200 3800
@@ -878,10 +858,10 @@ MAT_DIP_0
 Text Label 6850 4750 0    50   ~ 0
 MAT_DIP_1
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J?
+L Connector_Generic:Conn_02x05_Odd_Even J2
 U 1 1 5FFE5C6D
 P 9100 3750
-F 0 "J?" H 9150 4167 50  0000 C CNN
+F 0 "J2" H 9150 4167 50  0000 C CNN
 F 1 "Input Matrix" H 9150 4076 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 9100 3750 50  0001 C CNN
 F 3 "~" H 9100 3750 50  0001 C CNN
@@ -929,10 +909,10 @@ MAT_IN_2
 Text Label 9850 3950 2    50   ~ 0
 MAT_IN_3
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J?
+L Connector_Generic:Conn_02x05_Odd_Even J3
 U 1 1 60103999
 P 9100 4650
-F 0 "J?" H 9150 5067 50  0000 C CNN
+F 0 "J3" H 9150 5067 50  0000 C CNN
 F 1 "Output Matrix" H 9150 4976 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 9100 4650 50  0001 C CNN
 F 3 "~" H 9100 4650 50  0001 C CNN
@@ -1075,77 +1055,77 @@ Connection ~ 7050 5550
 $Comp
 L Mechanical:MountingHole_Pad H1
 U 1 1 602A5575
-P 5500 4900
-F 0 "H1" V 5454 5050 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5545 5050 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 5500 4900 50  0001 C CNN
-F 3 "~" H 5500 4900 50  0001 C CNN
-	1    5500 4900
+P 950 5250
+F 0 "H1" V 904 5400 50  0000 L CNN
+F 1 "MountingHole_Pad" V 995 5400 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 950 5250 50  0001 C CNN
+F 3 "~" H 950 5250 50  0001 C CNN
+	1    950  5250
 	0    1    1    0   
 $EndComp
 $Comp
 L Mechanical:MountingHole_Pad H2
 U 1 1 602A5FD4
-P 5500 5150
-F 0 "H2" V 5454 5300 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5545 5300 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 5500 5150 50  0001 C CNN
-F 3 "~" H 5500 5150 50  0001 C CNN
-	1    5500 5150
+P 950 5500
+F 0 "H2" V 904 5650 50  0000 L CNN
+F 1 "MountingHole_Pad" V 995 5650 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 950 5500 50  0001 C CNN
+F 3 "~" H 950 5500 50  0001 C CNN
+	1    950  5500
 	0    1    1    0   
 $EndComp
 $Comp
 L Mechanical:MountingHole_Pad H3
 U 1 1 602A6354
-P 5500 5400
-F 0 "H3" V 5454 5550 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5545 5550 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 5500 5400 50  0001 C CNN
-F 3 "~" H 5500 5400 50  0001 C CNN
-	1    5500 5400
+P 950 5750
+F 0 "H3" V 904 5900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 995 5900 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 950 5750 50  0001 C CNN
+F 3 "~" H 950 5750 50  0001 C CNN
+	1    950  5750
 	0    1    1    0   
 $EndComp
 $Comp
 L Mechanical:MountingHole_Pad H4
 U 1 1 602A66B8
-P 5500 5650
-F 0 "H4" V 5454 5800 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5545 5800 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 5500 5650 50  0001 C CNN
-F 3 "~" H 5500 5650 50  0001 C CNN
-	1    5500 5650
+P 950 6000
+F 0 "H4" V 904 6150 50  0000 L CNN
+F 1 "MountingHole_Pad" V 995 6150 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_Pad_Via" H 950 6000 50  0001 C CNN
+F 3 "~" H 950 6000 50  0001 C CNN
+	1    950  6000
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5400 4900 5250 4900
+	850  5250 700  5250
 Wire Wire Line
-	5250 4900 5250 5150
+	700  5250 700  5500
 Wire Wire Line
-	5250 5650 5400 5650
+	700  6000 850  6000
 Wire Wire Line
-	5400 5400 5250 5400
-Connection ~ 5250 5400
+	850  5750 700  5750
+Connection ~ 700  5750
 Wire Wire Line
-	5400 5150 5250 5150
-Connection ~ 5250 5150
+	850  5500 700  5500
+Connection ~ 700  5500
 Wire Wire Line
-	5250 5150 5250 5400
+	700  5500 700  5750
 $Comp
 L power:GND #PWR0116
 U 1 1 602D70F4
-P 5250 5800
-F 0 "#PWR0116" H 5250 5550 50  0001 C CNN
-F 1 "GND" H 5255 5627 50  0000 C CNN
-F 2 "" H 5250 5800 50  0001 C CNN
-F 3 "" H 5250 5800 50  0001 C CNN
-	1    5250 5800
+P 700 6150
+F 0 "#PWR0116" H 700 5900 50  0001 C CNN
+F 1 "GND" H 705 5977 50  0000 C CNN
+F 2 "" H 700 6150 50  0001 C CNN
+F 3 "" H 700 6150 50  0001 C CNN
+	1    700  6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 5400 5250 5650
-Connection ~ 5250 5650
+	700  5750 700  6000
+Connection ~ 700  6000
 Wire Wire Line
-	5250 5650 5250 5800
+	700  6000 700  6150
 $Sheet
 S 9450 1200 1150 1400
 U 5F8F8E6B
@@ -1301,10 +1281,10 @@ SD_DO
 Text Label 9950 6250 2    50   ~ 0
 SD_SCK
 $Comp
-L Connector_Generic:Conn_02x10_Odd_Even J?
+L Connector_Generic:Conn_02x10_Odd_Even J5
 U 1 1 5FF8F982
 P 9300 5750
-F 0 "J?" H 9350 6367 50  0000 C CNN
+F 0 "J5" H 9350 6367 50  0000 C CNN
 F 1 "DISPLAY" H 9350 6276 50  0000 C CNN
 F 2 "" H 9300 5750 50  0001 C CNN
 F 3 "~" H 9300 5750 50  0001 C CNN
@@ -1412,12 +1392,11 @@ Wire Wire Line
 Text Label 9050 1600 0    50   ~ 0
 I2S1_WS
 Text Label 9050 1700 0    50   ~ 0
-I2S_SD
+I2S1_SD
 NoConn ~ 2150 3500
 NoConn ~ 2150 3600
 NoConn ~ 2150 3700
 NoConn ~ 2150 3100
-NoConn ~ 2150 3800
 NoConn ~ 2150 5200
 NoConn ~ 2150 5300
 NoConn ~ 2150 5400
@@ -1441,7 +1420,152 @@ NoConn ~ 3750 4500
 NoConn ~ 3750 4400
 NoConn ~ 3750 4300
 NoConn ~ 3750 4000
-NoConn ~ 3750 3900
 NoConn ~ 3750 2100
 NoConn ~ 2150 2200
+Wire Wire Line
+	9450 2000 9050 2000
+Text Label 9050 2200 0    50   ~ 0
+I2S2_CK
+Wire Wire Line
+	9450 2100 9050 2100
+Wire Wire Line
+	9050 2200 9450 2200
+Wire Wire Line
+	9050 2300 9450 2300
+Wire Wire Line
+	9050 2400 9450 2400
+Text Label 9050 2400 0    50   ~ 0
+I2S2_SD
+Text Label 9050 2300 0    50   ~ 0
+I2S2_WS
+Wire Wire Line
+	9450 1900 9050 1900
+Text Label 9050 1900 0    50   ~ 0
+PLAY_MUTE
+Wire Wire Line
+	3750 3900 4200 3900
+Text Label 4200 3900 2    50   ~ 0
+PLAY_MUTE
+NoConn ~ 3750 4900
+NoConn ~ 3750 6300
+NoConn ~ 3750 1800
+NoConn ~ 3750 1900
+NoConn ~ 3750 2000
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J10
+U 1 1 608DB002
+P 5500 4400
+F 0 "J10" H 5550 4717 50  0000 C CNN
+F 1 "I2C1" H 5550 4626 50  0000 C CNN
+F 2 "" H 5500 4400 50  0001 C CNN
+F 3 "~" H 5500 4400 50  0001 C CNN
+	1    5500 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J11
+U 1 1 608DD4B3
+P 5500 4950
+F 0 "J11" H 5550 5267 50  0000 C CNN
+F 1 "I2C2" H 5550 5176 50  0000 C CNN
+F 2 "" H 5500 4950 50  0001 C CNN
+F 3 "~" H 5500 4950 50  0001 C CNN
+	1    5500 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J12
+U 1 1 608F2E22
+P 5500 5500
+F 0 "J12" H 5550 5817 50  0000 C CNN
+F 1 "I2C3" H 5550 5726 50  0000 C CNN
+F 2 "" H 5500 5500 50  0001 C CNN
+F 3 "~" H 5500 5500 50  0001 C CNN
+	1    5500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0146
+U 1 1 6091F1C4
+P 6300 4150
+F 0 "#PWR0146" H 6300 4000 50  0001 C CNN
+F 1 "+5V" H 6315 4323 50  0000 C CNN
+F 2 "" H 6300 4150 50  0001 C CNN
+F 3 "" H 6300 4150 50  0001 C CNN
+	1    6300 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 4150 6300 4300
+Wire Wire Line
+	6300 5400 5800 5400
+Wire Wire Line
+	6300 4850 5800 4850
+Connection ~ 6300 4850
+Wire Wire Line
+	6300 4850 6300 5400
+Wire Wire Line
+	6300 4300 5800 4300
+Connection ~ 6300 4300
+Wire Wire Line
+	6300 4300 6300 4850
+Wire Wire Line
+	5300 4500 4750 4500
+Wire Wire Line
+	4750 4500 4750 5050
+$Comp
+L power:GND #PWR0147
+U 1 1 6097B992
+P 4750 5900
+F 0 "#PWR0147" H 4750 5650 50  0001 C CNN
+F 1 "GND" H 4755 5727 50  0000 C CNN
+F 2 "" H 4750 5900 50  0001 C CNN
+F 3 "" H 4750 5900 50  0001 C CNN
+	1    4750 5900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 5600 4750 5600
+Connection ~ 4750 5600
+Wire Wire Line
+	4750 5600 4750 5900
+Wire Wire Line
+	5300 5050 4750 5050
+Connection ~ 4750 5050
+Wire Wire Line
+	4750 5050 4750 5600
+NoConn ~ 5800 4500
+NoConn ~ 5300 4300
+NoConn ~ 5300 4850
+NoConn ~ 5800 5050
+NoConn ~ 5300 5400
+NoConn ~ 5800 5600
+Wire Wire Line
+	5300 4400 4950 4400
+Text Label 4950 4400 0    50   ~ 0
+I2C1_SCL
+Text Label 4950 4950 0    50   ~ 0
+I2C2_SCL
+Text Label 4950 5500 0    50   ~ 0
+I2C3_SCL
+Wire Wire Line
+	4950 4950 5300 4950
+Wire Wire Line
+	4950 5500 5300 5500
+Text Label 6200 4400 2    50   ~ 0
+I2C1_SDA
+Wire Wire Line
+	5800 4400 6200 4400
+Wire Wire Line
+	6200 4950 5800 4950
+Wire Wire Line
+	6200 5500 5800 5500
+Text Label 6200 4950 2    50   ~ 0
+I2C2_SDA
+Text Label 6200 5500 2    50   ~ 0
+I2C3_SDA
+Wire Wire Line
+	2150 3800 1700 3800
+Text Label 1700 3800 0    50   ~ 0
+SD_SS
 $EndSCHEMATC
