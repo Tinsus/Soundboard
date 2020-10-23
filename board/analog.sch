@@ -1744,4 +1744,10 @@ Wire Wire Line
 Connection ~ 10050 4800
 Text Label 11200 4800 2    50   ~ 0
 AUDIO_PLAYBACK_CH_1R
+$Sheet
+S 6000 6600 850  500 
+U 5F9620F1
+F0 "Audio Mixer" 50
+F1 "audiomixer.sch" 50
+$EndSheet
 $EndSCHEMATC
