@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 3 3
 Title ""
 Date ""
 Rev ""
@@ -13,4 +13,238 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L Device:Q_NPN_BCE TR?
+U 1 1 5F973DF1
+P 2850 1450
+F 0 "TR?" H 3040 1496 50  0000 L CNN
+F 1 "TIP31A" H 3040 1405 50  0000 L CNN
+F 2 "" H 3050 1550 50  0001 C CNN
+F 3 "~" H 2850 1450 50  0001 C CNN
+	1    2850 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PNP_BCE TR?
+U 1 1 5F974A79
+P 2850 2300
+F 0 "TR?" H 3040 2254 50  0000 L CNN
+F 1 "TIP32A" H 3040 2345 50  0000 L CNN
+F 2 "" H 3050 2400 50  0001 C CNN
+F 3 "~" H 2850 2300 50  0001 C CNN
+	1    2850 2300
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F975B71
+P 3400 1850
+F 0 "C?" V 3148 1850 50  0000 C CNN
+F 1 "1000µF" V 3239 1850 50  0000 C CNN
+F 2 "" H 3438 1700 50  0001 C CNN
+F 3 "~" H 3400 1850 50  0001 C CNN
+	1    3400 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F9770A2
+P 3700 2100
+F 0 "R?" H 3770 2146 50  0000 L CNN
+F 1 "16R" H 3770 2055 50  0000 L CNN
+F 2 "" V 3630 2100 50  0001 C CNN
+F 3 "~" H 3700 2100 50  0001 C CNN
+	1    3700 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F97A65D
+P 1650 2550
+F 0 "C?" V 1398 2550 50  0000 C CNN
+F 1 "1µF" V 1489 2550 50  0000 C CNN
+F 2 "" H 1688 2400 50  0001 C CNN
+F 3 "~" H 1650 2550 50  0001 C CNN
+	1    1650 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1500 2550 1000 2550
+Wire Wire Line
+	3550 1850 3700 1850
+Wire Wire Line
+	3700 1850 3700 1950
+$Comp
+L power:GND #PWR?
+U 1 1 5F980D0E
+P 2400 3250
+F 0 "#PWR?" H 2400 3000 50  0001 C CNN
+F 1 "GND" H 2405 3077 50  0000 C CNN
+F 2 "" H 2400 3250 50  0001 C CNN
+F 3 "" H 2400 3250 50  0001 C CNN
+	1    2400 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F98196A
+P 3700 2350
+F 0 "#PWR?" H 3700 2100 50  0001 C CNN
+F 1 "GND" H 3705 2177 50  0000 C CNN
+F 2 "" H 3700 2350 50  0001 C CNN
+F 3 "" H 3700 2350 50  0001 C CNN
+	1    3700 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1850 3850 1850
+Connection ~ 3700 1850
+Wire Wire Line
+	3700 2250 3700 2350
+$Comp
+L Device:R R?
+U 1 1 5F984A03
+P 2400 3000
+F 0 "R?" H 2470 3046 50  0000 L CNN
+F 1 "100R" H 2470 2955 50  0000 L CNN
+F 2 "" V 2330 3000 50  0001 C CNN
+F 3 "~" H 2400 3000 50  0001 C CNN
+	1    2400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F9851D0
+P 2400 1250
+F 0 "R?" H 2470 1296 50  0000 L CNN
+F 1 "1k" H 2470 1205 50  0000 L CNN
+F 2 "" V 2330 1250 50  0001 C CNN
+F 3 "~" H 2400 1250 50  0001 C CNN
+	1    2400 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5F987200
+P 2400 1650
+F 0 "D?" V 2446 1570 50  0000 R CNN
+F 1 "1N4148" V 2355 1570 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2400 1475 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2400 1650 50  0001 C CNN
+	1    2400 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5F9896A7
+P 2400 2100
+F 0 "D?" V 2446 2020 50  0000 R CNN
+F 1 "1N4148" V 2355 2020 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2400 1925 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2400 2100 50  0001 C CNN
+	1    2400 2100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 TR?
+U 1 1 5F98D080
+P 2300 2550
+F 0 "TR?" H 2490 2596 50  0000 L CNN
+F 1 "2N3904" H 2490 2505 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 2500 2475 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 2300 2550 50  0001 L CNN
+	1    2300 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 2550 1950 2550
+$Comp
+L Device:R R?
+U 1 1 5F98E871
+P 1950 2150
+F 0 "R?" H 2020 2196 50  0000 L CNN
+F 1 "100k" H 2020 2105 50  0000 L CNN
+F 2 "" V 1880 2150 50  0001 C CNN
+F 3 "~" H 1950 2150 50  0001 C CNN
+	1    1950 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F98F471
+P 1950 2950
+F 0 "R?" H 2020 2996 50  0000 L CNN
+F 1 "15k" H 2020 2905 50  0000 L CNN
+F 2 "" V 1880 2950 50  0001 C CNN
+F 3 "~" H 1950 2950 50  0001 C CNN
+	1    1950 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2550 1950 2800
+Connection ~ 1950 2550
+Wire Wire Line
+	1950 2550 2100 2550
+Wire Wire Line
+	1950 2550 1950 2300
+Wire Wire Line
+	1950 3250 1950 3100
+Wire Wire Line
+	2400 3250 2400 3150
+Wire Wire Line
+	2400 3250 1950 3250
+Wire Wire Line
+	2400 2850 2400 2750
+$Comp
+L power:+12V #PWR?
+U 1 1 5F9959E8
+P 2400 1000
+F 0 "#PWR?" H 2400 850 50  0001 C CNN
+F 1 "+12V" H 2415 1173 50  0000 C CNN
+F 2 "" H 2400 1000 50  0001 C CNN
+F 3 "" H 2400 1000 50  0001 C CNN
+	1    2400 1000
+	1    0    0    -1  
+$EndComp
+Connection ~ 2400 3250
+Wire Wire Line
+	2400 2350 2400 2300
+Wire Wire Line
+	2400 2300 2650 2300
+Connection ~ 2400 2300
+Wire Wire Line
+	2400 2300 2400 2250
+Wire Wire Line
+	2400 1950 2400 1800
+Wire Wire Line
+	2400 1500 2400 1450
+Wire Wire Line
+	2400 1100 2400 1050
+Wire Wire Line
+	1950 2000 1950 1050
+Wire Wire Line
+	1950 1050 2400 1050
+Connection ~ 2400 1050
+Wire Wire Line
+	2400 1050 2400 1000
+Wire Wire Line
+	2400 1450 2650 1450
+Connection ~ 2400 1450
+Wire Wire Line
+	2400 1450 2400 1400
+Wire Wire Line
+	2950 1250 2950 1050
+Wire Wire Line
+	2950 1050 2400 1050
+Wire Wire Line
+	2950 1650 2950 1850
+Wire Wire Line
+	2950 2500 2950 3250
+Wire Wire Line
+	2950 3250 2400 3250
+Wire Wire Line
+	3250 1850 2950 1850
+Connection ~ 2950 1850
+Wire Wire Line
+	2950 1850 2950 2100
 $EndSCHEMATC
